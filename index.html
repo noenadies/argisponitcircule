@@ -51,7 +51,17 @@
         var geodesic = dom.byId("geodesic");
         map.addLayer(gl);
         map.on("click", function(e) {
-          var radius = 60;
+          /*var radius = 60;
+          var circle = new Circle({
+            center: [-74.1542703,4.6474866],
+            geodesic: domAttr.get(geodesic, "checked"),
+            radius: radius
+          });
+          var graphic = new Graphic(circle, symbol);
+          gl.add(graphic);*/
+        });
+      function hacermarcas (){
+var radius = 60;
           var circle = new Circle({
             center: [-74.1542703,4.6474866],
             geodesic: domAttr.get(geodesic, "checked"),
@@ -59,8 +69,13 @@
           });
           var graphic = new Graphic(circle, symbol);
           gl.add(graphic);
-        });
-      });
+
+
+      }setTimeout(hacermarcas, 3000); });
+
+
+    
+     
     </script>
   </head>
   <body>
